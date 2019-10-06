@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tablas de multiplicar</title>
+    <link href="estilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid bg-secondary text-center">
+        <img src="titulo.png" alt="tit" height="75" width="150">
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" style="color:chartreuse">Codepy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
+            aria-controls="navbars" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav">
+                <li class="navbar-item"><a class="nav-link" href="#"><i class="fa fa-home"></i><span class="pl-1"
+                            style="color:chartreuse">Inicio</span></a></li>
+                <li class="navbar-item"><a href="#" class="nav-link" style="color:chartreuse">Referencias</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link" style="color:chartreuse">Ejercicios</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link" style="color:chartreuse">Desafios</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link" style="color:chartreuse">Sobre nosotros</a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-sign-in"></i><span class="pl-1" style="color:chartreuse">iniciar sesion</span>
+                    </a>
+                    <div class="dropdown-menu bg-dark">
+                        <form>
+                            <h6 class="text-center" style="color:chartreuse">Iniciar sesion</h6>
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-dark"><i class="fa fa-user"
+                                            style="color: white"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="usuario">
+                            </div>
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-dark"><i class="fa fa-lock"
+                                            style="color: white"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="contraseña">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-light text-dark">enviar</button>
+                                <div class="container-fluid"><a href="#" style="font-size: 10px">¿olvido su
+                                        contraseña?</a></div>
+                            </div>
+                        </form>
+                    </div>
+                <li class="navbar-item"><a href="#" class="nav-link"><i class="fa fa-user"></i><span class="pl-1"
+                            style="color:chartreuse">registrarse</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <h1 id="Problem2">Enunciado</h1>
+    <p id="p2">En una escuela un niño quiere ayuda para calcular las tablas de multiplicar y quiere practicar para aprenderlas.Cree un programa que reciba 2 valores desde 1 al 12 ( se asume que son enteros ) y le pregunte al usuario su respuesta, si el usuario acierta debe retornar "Has Ganado" y el programa finaliza, si este falla que retorne "Vuelva a intentar" hasta que este logre resolverlo y así finalizar.</p>
+</body>
+</body>
+</html>
