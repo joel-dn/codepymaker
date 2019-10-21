@@ -27,6 +27,7 @@ function comprobacion() {
     var correcto = 1;
     var codes = document.getElementsByClassName("code")
     for(var i=0;i<codes.length;i++) {
+        codes[i].setAttribute("draggable","false")
         if (codes[i].getAttribute("name") != codes[i].parentNode.getAttribute("id")) {
             correcto = correcto*0;
             codes[i].style.color = "#FF3333"
