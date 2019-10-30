@@ -1,0 +1,76 @@
+#Problem1 {
+    text-align: center;
+    color: darkblue;
+}
+#Problem2 {
+    text-align: center;
+}
+#p2 {
+    text-justify: auto;
+    font-size: 150%;
+}
+#ejercicios_de_python {
+    text-align: center;
+    color: green;
+}
+
+input {
+    text-align: center;
+    font: normal;
+}
+#ayuda_1 {
+    font: normal;
+}
+h2 {
+    color: crimson;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+    color: darkgreen;
+}
+h4 {
+    text-justify: distribute;
+}
+h5 {
+    text-justify: distribute;
+}
+#botón {
+    text-align: center;
+    color: ivory;
+    background-color: black;
+}
+tr {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+table {
+    align-content: center;
+}
+#div1, #div2, #div3, #div4 {
+    width: 350px;
+    height: 50px;
+    padding: 8px;
+    border: 1px solid #aaaaaa;
+    text-align: justify;
+}
+
+.col {
+    height: 50px;
+}
+#tit {
+    text-align: center;
+    border: 1px solid black;
+}
+
+#cont {
+    border: 1px solid black;
+}
+
+.code.over {
+    border: 2px dashed #000;
+}
+
+.rv.over {
+    border: 2px dashed #000;
+}
