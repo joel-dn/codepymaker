@@ -17,17 +17,26 @@
             text-align: center;
             border: 1px solid black;
         }
+    
         #cont {
             border: 1px solid black;
         }
+    
+        .code.over {
+            border: 2px dashed #000;
+        }
+    
+        .rv.over {
+            border: 2px dashed #000;
+        }
     </style>
     <script src="scripts/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="estilos.css" rel="stylesheet">
-    <script type="text/javascript">
+    <script>
         function redireccionar(){
           window.locationf="http://www.cristalab.com";
-        } 
-        setTimeout ("redireccionar()", 5000); //tiempo expresado en milisegundos
+        }
     </script>
 </head>
 <body>
@@ -66,16 +75,16 @@
         <br>
         <div class="row">
             <div class="col">
-                <div class="row"><div class="col" ondrop="drop(event)" ondragover="allowDrop(event)"><p class="code" id="drag1" draggable="true" ondragstart="drag(event)" name="div1">peso_queso = int(input())</p></div></div>
-                <div class="row"><div class="col" ondrop="drop(event)" ondragover="allowDrop(event)"><p class="code" id="drag2" draggable="true" ondragstart="drag(event)" name="div2">precio_por_kg = int(input())</p></div></div>
-                <div class="row"><div class="col" ondrop="drop(event)" ondragover="allowDrop(event)"><p class="code" id="drag3" draggable="true" ondragstart="drag(event)" name="div3">precio_final = peso_queso*precio_por_kg</p></div></div>
-                <div class="row"><div class="col" ondrop="drop(event)" ondragover="allowDrop(event)"><p class="code" id="drag4" draggable="true" ondragstart="drag(event)" name="div4">print(precio_final)</p></div></div>
+                <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r1').innerHTML)" id="r1"><p class="code" id="drag1" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div1">peso_queso = int(input())</p></div></div>
+                <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r2').innerHTML)" id="r2"><p class="code" id="drag2" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div2">precio_por_kg = int(input())</p></div></div>
+                <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r3').innerHTML)" id="r3"><p class="code" id="drag3" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div3">precio_final = peso_queso*precio_por_kg</p></div></div>
+                <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r4').innerHTML)" id="r4"><p class="code" id="drag4" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div4">print(precio_final)</p></div></div>
             </div>
             <div class="col">
-                <div class="row"><div class="col"><div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" maxlength="1"></div></div></div>
-                <div class="row"><div class="col"><div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div></div></div>
-                <div class="row"><div class="col"><div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div></div></div>
-                <div class="row"><div class="col"><div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div></div></div>
+                <div class="row"><div class="col"><div id="div1" ondragenter="DragEnter(document.getElementById('div1'))" ondragleave="DragLeave(document.getElementById('div1'))" ondrop="drop(event);DragLeave(document.getElementById('div1'))" ondragover="testdiv(event, document.getElementById('div1').innerHTML)"></div></div></div>
+                <div class="row"><div class="col"><div id="div2" ondragenter="DragEnter(document.getElementById('div2'))" ondragleave="DragLeave(document.getElementById('div2'))" ondrop="drop(event);DragLeave(document.getElementById('div2'))" ondragover="testdiv(event, document.getElementById('div2').innerHTML)"></div></div></div>
+                <div class="row"><div class="col"><div id="div3" ondragenter="DragEnter(document.getElementById('div3'))" ondragleave="DragLeave(document.getElementById('div3'))" ondrop="drop(event);DragLeave(document.getElementById('div3'))" ondragover="testdiv(event, document.getElementById('div3').innerHTML)"></div></div></div>
+                <div class="row"><div class="col"><div id="div4" ondragenter="DragEnter(document.getElementById('div4'))" ondragleave="DragLeave(document.getElementById('div4'))" ondrop="drop(event);DragLeave(document.getElementById('div4'))" ondragover="testdiv(event, document.getElementById('div4').innerHTML)"></div></div></div>
             </div>
         </div>
         <br>
@@ -83,7 +92,7 @@
     <br><br><br><br><br><br>
     <div class="container">
         <div class="row">
-            <div class="col"><input type="submit" class="btn btn-dark" value="enviar" onclick="comprobacion()"></div>
+            <div class="col"><input type="submit" class="btn btn-dark" value="enviar" onclick="comprobacion();quitdrag()" id="btn"></div>
             <div class="col-6"><h3 id="res"></h3></div>
         </div>
         <div class="row">
