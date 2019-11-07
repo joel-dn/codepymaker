@@ -1,6 +1,6 @@
 import sqlite3
 #creacion de la base de datos
-conexion =sqlite3.connect("CodePyMaker")
+conexion =sqlite3.connect("CodePyMaker.db")
 
 #crear cursor
 cursor =conexion.cursor()
