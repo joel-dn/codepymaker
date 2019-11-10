@@ -35,32 +35,51 @@ function DragEnter(e) {
 function DragLeave(e) {
     e.setAttribute('style','border: 1px solid #aaaaaa;');
 }
+var x = comprobacion()
 function comprobacion() {
-    var correcto = 1;
+    var res = [];
     var codes = document.getElementsByClassName("code")
     for(var i=0;i<codes.length;i++) {
         codes[i].setAttribute('draggable','false')
         if (codes[i].getAttribute("name") != codes[i].parentNode.getAttribute("id")) {
-            correcto = correcto*0;
             codes[i].style.color = "#FF3333";
+            res.splice(0, 0, 0)
         }
         else {
             codes[i].style.color = "#008000";
-
-        }
-        if (i == codes.length - 1) {
-            break;
+            res.splice(0, 0, 1)
         }
     }
-    if (correcto == 1) {
-        window.location="https://stackoverflow.com/questions/9830650/how-to-stop-a-javascript-for-loop";
-    }
-    else {
-        window.location="#";
-    }
+    return res
 }
-//Para redireccionar con tiempo
-function redireccionar() {
-    window.locationf = "http://www.cristalab.com";
+function pasarVariables(pagina,nombres) {
+    pagina += "?";
+    nomVec = nombres.split(",");
+    for(var i=0; i<nomVec.length;i++){
+        pagina += nomVec[i] + "=" + escape(eval(nomVec[i]))+"&";
+    }
+    pagina = pagina.substring(0,pagina.length-1);
+    x = redireccion(pagina,5000)
 }
-setTimeout("redireccionar()", 5000); //tiempo expresado en milisegundos
+function redireccion(paginas,Tiempo) {
+	setTimeout(function(){
+        window.location.href = paginas;
+    },Tiempo);
+}
+function Buenas(r){
+    var contar = 0;
+    for(i=0; i<r.length;i++){
+        if(r[i] == 1){
+            contar+=1;
+        }
+    }
+    return contar;
+}
+function totales(r){
+    return r.length;
+}
+function url(){
+    var r = window.location.pathname.split('/')
+    var s = r[r.length-1].split('.')
+    return s[0]
+}
