@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +11,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!--Font awesome-->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--Scripts-->
+    <script src="scripts/problemasres.js"></script>
+    <!--CSS-->
+    
+    <!--Desabilitar seleccion-->
+    <style>
+        .disabled-select {
+            user-select: none;
+            -moz-user-select: none;
+        }
+    </style>
 </head>
-
-<body class="disabled-select">
+<body onload="rec()" class="disabled-select">
     <div class="container-fluid bg-secondary text-center">
         <img src="imagenes/titulo.png" alt="tit" height="75" width="150">
     </div>
@@ -35,7 +43,8 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <!--INICIO-->
+    <div class="container-fluid text-center" id="cont">
+        <!--Aqui van las paginas que redireccionan-->
     </div>
+    <a class="btn btn-dark m-2 text-white" onclick="window.history.back(1)">Pagina anterior</a>
 </body>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +11,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!--Font awesome-->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--Scripts-->
 
-<body class="disabled-select">
+    <!--CSS-->
+    <link rel="stylesheet" href="referencias.css">
+    <!--Desabilitar seleccion-->
+    <style>
+        .disabled-select {
+            user-select: none;
+            -moz-user-select: none;
+        }
+    </style>
+</head>
+<body>
     <div class="container-fluid bg-secondary text-center">
         <img src="imagenes/titulo.png" alt="tit" height="75" width="150">
     </div>
@@ -35,7 +43,18 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <!--INICIO-->
+    <div class="container text-center">
+        <h1 class="display-1">Referencias</h1>
+        <hr>
+        <div class="btn btn-dark btn-block m-2 p-2 text-white" id="editores" onclick="window.location.href = 'editores.html'">
+            <h1 class="display-3">Editores de codigo recomendados</h1>
+        </div>
+        <div class="btn btn-light btn-block d-flex m-2 p-2 justify-content-center" id="python" onclick="window.location.href = 'ref_python.html'">
+            <h1 class="display-3">Referencias de Python</h1>
+            <img src="imagenes/python.png" alt="" width="100px" height="100px" class="ml-3">
+        </div>
+        <div class="btn btn-dark btn-block m-2 p-2 text-white" id="proxima">
+            <h1 class="display-3">Proximamente...</h1>
+        </div>
     </div>
 </body>
