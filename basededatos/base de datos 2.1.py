@@ -12,7 +12,7 @@ cursor.execute('''
     nombre VARCHAR(50),
     CARRERA VARCHAR(50),
     CONTRASENA VARCHAR(15),
-    CORREO VARCHAR(60)
+    CORREO VARCHAR(60),
     NIVEL INTEGER
     )
     ''')
