@@ -25,7 +25,7 @@ para agregar un lenguaje debes de realizar las siguentes instrucciones:
 3) iniciar con una cuenta autorizada por ejemplo: usuario: j_dne ,contraseña: codepymaker
 4) una vez en el admin clickear el agregar en donde dice Lenguajess
 
-*para modificarlos solo clickea en Lenguajess y clickea el lenguaje que quieres cambiar*
+**para modificarlos solo clickea en Lenguajess y clickea el lenguaje que quieres cambiar**
 
 **agregar un problema**
 
@@ -37,7 +37,9 @@ Para agregar un problema este tiene 2 fases, la fase del admin, y la fase del te
 2) ir a 'localhost:8000/admin' en el navegador
 3) iniciar con una cuenta autorizada por ejemplo: usuario: j_dne ,contraseña: codepymaker
 4) una vez en el admin clickear en agregar en donde dice Problemass
+
 se te pedira:
+
 - el lenguaje
 - el tipo de problema
 - el nombre ,que debe de ir con '_' si es con espacios (este se ocupara para nombrar el template tambien asi que deben de ser iguales los dos)
@@ -50,7 +52,8 @@ una vez agregado el problema se requiere de colocar las soluciones, para eso deb
 se te pedira:
 - el problema
 - la respuestas que estas varian su solucion dependiendo del tipo, estas son las reglas:
-*estas pueden ser escritas en un block de notas para poder diferenciar bien las comillas, este se copia, y se pega tal cual*
+
+**estas pueden ser escritas en un block de notas para poder diferenciar bien las comillas, este se copia, y se pega tal cual**
 
   para Ruteo:
     en los ruteos se hace un diccionario que como llave se utiliza la posicion de la casilla de la respuesta, estas parten 
@@ -82,7 +85,7 @@ se te pedira:
       y no asi:
       linea\notralinea\n
 
-  *para cualquier ejercicio que no sea ruteo, colocar en salida none*
+  **para cualquier ejercicio que no sea ruteo, colocar en salida none**
   
  **en la fase del template**
  
