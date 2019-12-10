@@ -13,10 +13,12 @@ para poder verlo tienes:
 9) dirigete a el navegador y en una pestaña nueva coloca 'localhost:8000' y te dirigira a la pagina.
 10) para iniciar sesion puedes con el usuario j_dne con contraseña codepymaker.
 
-**update**\n
+**update**
+
 los updates que suba tienen que remplazar la carpeta ya extraida llamada django
 
 **agregar un lenguaje**
+
 para agregar un lenguaje debes de realizar las siguentes instrucciones:
 1) iniciar el servidor con manage.py runserver
 2) ir a 'localhost:8000/admin' en el navegador
@@ -26,8 +28,11 @@ para agregar un lenguaje debes de realizar las siguentes instrucciones:
 *para modificarlos solo clickea en Lenguajess y clickea el lenguaje que quieres cambiar*
 
 **agregar un problema**
+
 Para agregar un problema este tiene 2 fases, la fase del admin, y la fase del template:
+
 **en la fase del admin**
+
 1) iniciar el servidor con manage.py runserver
 2) ir a 'localhost:8000/admin' en el navegador
 3) iniciar con una cuenta autorizada por ejemplo: usuario: j_dne ,contraseña: codepymaker
