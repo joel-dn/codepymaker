@@ -13,7 +13,7 @@ para poder verlo tienes:
 9) dirigete a el navegador y en una pestaña nueva coloca 'localhost:8000' y te dirigira a la pagina.
 10) para iniciar sesion puedes con el usuario j_dne con contraseña codepymaker.
 
-**update**
+**update**\n
 los updates que suba tienen que remplazar la carpeta ya extraida llamada django
 
 **agregar un lenguaje**
