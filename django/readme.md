@@ -55,24 +55,24 @@ se te pedira:
 
 **estas pueden ser escritas en un block de notas para poder diferenciar bien las comillas, este se copia, y se pega tal cual**
 
-  para Ruteo:
+ - para Ruteo:
     en los ruteos se hace un diccionario que como llave se utiliza la posicion de la casilla de la respuesta, estas parten 
     desde 0, por ejemplo, en la fila 0 columna 3 seria 'r0-c3'. Para los valores del diccionario se tiene que poner el valor 
     tal cual ,por ejemplo, si es un string colocar con comillas, si es una lista colocar con los parentesis nada mas, si es un 
     entero colocar el numero. Ejemplo {'r1-c2':2,'r0-c0':['hola','chao'],'r1-c4':'juan'}
   
-  para Completar:
+ - para Completar:
     en completar nada mas se coloca la lista con las respuestas pero estas deben ser todas strings. esta debe estar con un
     orden uno es a uno con el input es decir que si el input es el primero la posicion de la respuesta debe ser 0.
     Ejemplo: ['si','0','['ejemonia']']
     
-  para Ordenar:
+ - para Ordenar:
     en Ordenar se debe de hacer un diccionario que como llave utiliza el nombre del drageable, ejemplo, 'drag1', y como valor
     debe de tener una lista con las posibles posiciones de donde puede estar, es decir, colocar el id del div en donde su
     solucion este correcta, ejemplo, ['div1','div2']. Esto se hace por que algunas lineas hay varias soluciones validas posibles
     Ejemplo: {'linea1':['d1'],'linea2':['d3','d5']}
     
-  para Quiz:
+ - para Quiz:
       en los quizes se debe de hacer una lista con letras, ejemplo, 'a', estas deben de estar en orden uno es a uno, es
       decir, si es la primera pregunta la posicion de la respuesta debe ser el 0.
       Ejemplo: ['a','c','b']
