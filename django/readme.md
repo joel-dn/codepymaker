@@ -20,7 +20,11 @@ estar en la misma carpeta como lo muestra la imagen:
 
 https://raw.githubusercontent.com/joel-dn/codepymaker/master/django/imagenes/same.PNG
 
+**para mas rapides para llegar a la carpeta del server**
 
+el archivo cc.py se debera de colocar donde este ubicado por default el cmd como se muestra en la imagen:
+
+https://raw.githubusercontent.com/joel-dn/codepymaker/master/django/imagenes/same.PNG
 
 **agregar un lenguaje**
 
