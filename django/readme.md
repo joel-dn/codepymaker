@@ -15,9 +15,12 @@ para poder verlo tienes:
 
 **update**
 
-prueba
+Descargar dj y codepymaker e instalarlo en la carpeta que desee, pero con una condicion y es que lo extraido de estos tienen que
+estar en la misma carpeta como lo muestra la imagen:
 
 https://raw.githubusercontent.com/joel-dn/codepymaker/master/django/imagenes/same.PNG
+
+
 
 **agregar un lenguaje**
 
