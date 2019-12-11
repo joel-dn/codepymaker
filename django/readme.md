@@ -15,7 +15,9 @@ para poder verlo tienes:
 
 **update**
 
-los updates que suba tienen que remplazar la carpeta ya extraida llamada django
+prueba
+
+https://raw.githubusercontent.com/joel-dn/codepymaker/master/django/imagenes/same.PNG
 
 **agregar un lenguaje**
 
