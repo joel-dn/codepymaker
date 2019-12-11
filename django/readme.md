@@ -24,7 +24,21 @@ https://raw.githubusercontent.com/joel-dn/codepymaker/master/django/imagenes/sam
 
 el archivo cc.py se debera de colocar donde este ubicado por default el cmd como se muestra en la imagen:
 
-https://raw.githubusercontent.com/joel-dn/codepymaker/master/django/imagenes/same.PNG
+https://raw.githubusercontent.com/joel-dn/codepymaker/master/django/imagenes/ruta.PNG
+
+una vez ubicado en la carpeta colocar en el cmd cc.py para que inicie el programa, el cual te pedira el disco en donde esta
+ubicado la carpeta contenedora de los extraidos y despues su directorio, se puede hacer como en el paso 6) de arriba.
+
+https://raw.githubusercontent.com/joel-dn/codepymaker/master/django/imagenes/cc.PNG
+
+este creara un archivo .bat el cual se creara en la misma carpeta que cc, que al activarlo llamandolo en el cmd te llevara por
+la linea de comando a la carpeta.
+
+https://raw.githubusercontent.com/joel-dn/codepymaker/master/django/imagenes/nuevo_cc.PNG
+
+https://raw.githubusercontent.com/joel-dn/codepymaker/master/django/imagenes/r.PNG
+
+una vez en la carpeta se coloca 'a' para activar el virtualenv y 'c' para dirigirse a codepymaker.
 
 **agregar un lenguaje**
 
