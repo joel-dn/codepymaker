@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodepyMaker</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Font awesome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--Scripts-->
+
+    <!--CSS-->
+    <link rel="stylesheet" href="ref_C_Sharp.css">
+    <!--Desabilitar seleccion-->
+    <style>
+        .disabled-select {
+            user-select: none;
+            -moz-user-select: none;
+        }
+    </style>
+</head>
+
+<body class="disabled-select">
+    <div class="container-fluid bg-secondary text-center">
+        <img src="imagenes/titulo.png" alt="tit" height="75" width="150">
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <a href="codepymaker.html" class="navbar-brand">Codepy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
+            aria-controls="navbars" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav">
+                <li class="navbar-item"><a class="nav-link" href="home.html"><i class="fa fa-home"></i><span
+                            class="pl-1">Home</span></a></li>
+                <li class="navbar-item"><a href="referencias.html" class="nav-link">Referencias</a></li>
+                <li class="navbar-item"><a href="pre-problemas.html" class="nav-link">Ejercicios</a></li>
+                <li class="navbar-item"><a href="desafio1.html" class="nav-link">Desafios</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="container-fluid bg-light bb">
+            <h1 data-toggle="collapse" data-target="#tdato" class="display-3 t">Tipos de datos</h1>
+            <div class="collapse row" id="tdato">
+                <div class="col">
+                    <h1>Datos de texto: </h1>
+                    <h3>str</h3>
+                    <h6>*Strings</h6>
+                    <h1>Datos numericos: </h1>
+                    <h3>int, long, float, double, decimal</h3>
+                    <h6>*Enteros, Decimales</h6>
+                    <h1>Datos booleanos: </h1>
+                    <h3>bool</h3>
+                    <h6>*tiene dos valores True o False</h6>
+                    <h1>Datos secuenciales: </h1>
+                    <h3>list, tuple, str</h3>
+                    <h6>*Listas, Tuplas, strings</h6>
+                    <h1>Datos de mapeo: </h1>
+                    <h3>dict</h3>
+                    <h6>*Diccionarios</h6>
+                </div>
+                <div class="col">
+                    <h1>Datos mutables</h1>
+                    <h6>Es posible cambiar, modificar o actualizar el contenido</h6>
+                    <ul>
+                        <li>Array</li>
+                        <li>list</li>
+                        <li>dict</li>
+                    </ul>
+                    <h1>Datos inmutables</h1>
+                    <h6>No es posible cambiar, modificar o actualizar el contenido</h6>
+                    <ul>
+                        <li>int</li>
+                        <li>float</li>
+                        <li>bool</li>
+                        <li>tuple</li>
+                        <li>str</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#var">Variables</h1>
+            <div class="collapse" id="var">
+                <h1>Crear variables</h1>
+                <h3>Las variables son contenedores para almacenar datos. En C# las variables tienen la pecularidad que deben ser declaras 
+                    y posteriormente iniciadas, esto se puede realizar en la misma linea, como tambien varias mas abajo.</h3>
+                <h3>La estructura que que se debe seguir al declacar un variable es:</h3>
+                <ul>
+                    <li>tipoDeDato nombreVariable = el valor que se le quiera entregar </li>
+                </ul>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>int x = 4</h6>
+                    <h6>string y = 'hola'</h6>
+                </div>
+                <h1>Nombrar una variable</h1>
+                <h3>Una variable puede tener un nombre corto (como x o y) o uno más descriptivo (como
+                    edad,fecha,area_total).Sin embargo C# se tienen en cuenta estas suguerencias: </h3>
+                <ul>
+                    <li>
+                        <h4>No comenzar el nombre de una variable con guion bajo "_"</h4>
+                    </li>
+                    <li>
+                        <h4>No crear mas de una variable que se diferencie solo por una letra</h4>
+                        <h5>ejemplo</h5>
+                        <ul>
+                            <li>edad</li>
+                            <li>Edad</li>
+                            <li>EDAD</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Comenzar el nombre de las variables con minuscula</h4>
+                    </li>
+                    <li>
+                        <h4>Si el nombre de una variable esta compuesto por mas de una palabra, comienza la segunda con mayúscula
+                            (camelCase)
+                        </h4>
+                    </li>
+                </ul>
+                <h1>Salidas de variables</h1>
+                <h3>En C# el comandando utilisado para enviar mensajes por panralla desde la consola (CMD) es "Console.WriteLine()".</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>string x = 'hola mundo'</h6>
+                    <h6>Console.WriteLine(x)</h6>
+                </div>
+                <h2>En la salida: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>hola mundo</h6>
+                </div>
+                <h3>Console.WriteLine() acepta cualquier tipo de dato y lo transforma a un texto para despues mostrarlo</h3>
+            </div>
+        </div>
+        <div class="container-fluid bg-light bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#num">Números</h1>
+            <div class="collapse" id="num">
+                <h1>Enteros:</h1>
+                <h1>En C# los enteros se dividen en 2 grupos </h1>
+                <h2>con signo:</h2>
+                <h2>estos toman todos los valores positivos sin tomar la parte decimal, estos tienen un ranga defino cada uno mayor 
+                    al anterior, es decir, short tiene una mayor capacidad que sbyte y asi sucesivamente.</h2>
+                <ul>
+                    <li>sbyte</li>
+                    <li>short</li>
+                    <li>int</li>
+                    <li>long</li>
+                </ul>
+                <h3>Ejemplos: <h3>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>sbyte n = 4</h6>
+                    <h6> int k = -345</h6>
+                </div>
+                <h2>sin signo:</h2>
+                <h3>Toman numero sin importar el signo es decir el numero puede ser tanto un entero positivo o un entero negativo</h3>
+                <ul>
+                    <li>byte</li>
+                    <li>ushort</li>
+                    <li>uint</li>
+                    <li>ulong</li>
+                </ul>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>byte l = -128</h6>
+                    <h6>uint j = -345585565</h6>
+                </div>
+                <h1>Reales (Decimales)</h1>
+                <h2>existen 3 tipos de datos asignados para cumplir con este cometido estos son:</h2>
+                <h3>Es un numero que puede contener uno o más decimales y este puede ser positivo o negativo, estos se
+                    denotan con un . en el donde comienza la parte decimal</h3>
+                    <ul>
+                        <li>float</li>
+                        <li>double</li>
+                        <li>decimal</li>
+                    </ul>
+                <h4>Estos al igual que los enteros aumentan su capacidad en orden decedente partiendo desde el float siendo este el que 
+                    menos almacena datos.</h4>
+                <h2>Ejemplos: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6> double d = 3.1415</h6>
+                    <h6> decimal k = -1.02582268258258457</h6>
+                </div>
+                <h1>Conversión de tipo</h1>
+                <h3>Existen combinaciones que son posibles de realizar de manera implicita como otros que no en esos casos hay que realizar
+                    una convercion explicita.</h3>
+                <h4>implicita: convercion de tipos similares pero con distinto alcance.
+                    explicita: conversion de tipos que no son compatibles entre si.</h4>
+                <h2>Ejemplo de convercion explicita: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>doble num = 7.15;</h6>
+                    <h6>int num1;</h6>
+                    <h6>num1= (int) num;</h6>
+                    <h6>Console.WriteLine(num1); //la salida es 7</h6>
+                </div>
+                <h2>Ejemplo de convercion implicita: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>int num = 7;</h6>
+                    <h6>long num1;</h6>
+                    <h6>num1= num;</h6>
+                    <h6>Console.WriteLine(num1); //la salida no cambia lo que cambia es el alcance del numero</h6>
+                </div>
+                <h2>tabla de compatibilidad de tipos de convercion</h2>
+                <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/numeric-conversions"><h3>link Conversiones</h3></a>
+                <h3>Los tipos de datos que se realizar una convercion implicita son los de la misma categoria es, es decir, enteros con enteros
+                    reales con reales, y caso contrario con la convercion explicita son datos no compatibles entre si normalmente.
+                </h3>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#op">Operaciones</h1>
+            <div class="collapse" id="op">
+                <h1>Operadores aritmeticos</h1>
+                <h3>Los operadores aritmeticos trabajan con dos variables numericas</h3>
+                <table class="table table-light table-striped text-left">
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Nombre</th>
+                            <th>Ejemplo</th>
+                            <th>Salida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>Adición</td>
+                            <td>5 + 6</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>sustracción</td>
+                            <td>16 - 3</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplición</td>
+                            <td>3 * 5</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>División</td>
+                            <td>24 / 8</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>math.Pow(base,exponente)</td>
+                            <td>Potencia (Elevado)</td>
+                            <td>math.Pow(2,5)</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Modúlo</td>
+                            <td>16 % 2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>//</td>
+                            <td>División entera</td>
+                            <td>3 // 2</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h1>Operadores de asignación</h1>
+                <h3>Los operadores de asignación son para asignar valores a variables</h3>
+                <table class="table table-light table-striped text-left">
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Ejemplo</th>
+                            <th>Es igual a</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>=</td>
+                            <td>int x = 6;</td>
+                            <td>int x = 6;</td>
+                        </tr>
+                        <tr>
+                            <td>+=</td>
+                            <td>x += 5;</td>
+                            <td>x = x + 5;</td>
+                        </tr>
+                        <tr>
+                            <td>-=</td>
+                            <td>x -= 7;</td>
+                            <td>x = x - 7;</td>
+                        </tr>
+                        <tr>
+                            <td>/=</td>
+                            <td>x /= 8;</td>
+                            <td>x = x / 8;</td>
+                        </tr>
+                        <tr>
+                            <td>%=</td>
+                            <td>x %= 12;</td>
+                            <td>x = x % 12;</td>
+                        </tr>
+                        <tr>
+                            <td>//=</td>
+                            <td>x //= 64;</td>
+                            <td>x = x // 64;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container-fluid bg-light bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#cond">Condicionales</h1>
+            <div class="collapse" id="cond">
+                <h1>Condiciones:</h1>
+                <h2>todos los controladores de flujo dentro de lo que hacen deben estar dentro de estas llaves "{}"</h2>
+                <h3>Estos son los que acompañarán a las declaraciones "if" o "elif" y bucles.</h3>
+                <h4>Las condiciones de los if tanto como los else if deben ir entre pararentesis siempre</h4>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>Igual: a == b</h6>
+                    <h6>No es igual: a != B</h6>
+                    <h6>Menos de: a < b </h6> <h6>Menor o igual que: a <= b</h6> <h6>Mayor que: a > b</h6>
+                    <h6>Mayor o igual que: a >= b</h6>
+                </div><br>
+                <h1>Declaración if:</h1>
+                <h3>Se escribe una "declaración if" utilizando la palabra clave reservada if.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>int a = 50;</h6>
+                    <h6>int b = 100;</h6>
+                    <h6> if (b > a):</h6>
+                    <h6>{</h6>
+                        Console.WriteLine("b es mayor que a");
+                    <h6>}</h6>
+                </div>
+                <h3>En este ejemplo, usamos dos variables, a y b, que se usan como parte de la instrucción if para
+                    probar si b es mayor que a. Como a es 50 y b es 100, sabemos que 100 es mayor que 50, por lo que
+                    imprimimos en la pantalla que "b es mayor que a".</h3><br>
+                <h1>Else if</h1>
+                <h3>La palabra clave else if es la forma de c# por si la codicion del if es falsa, entonces prueba con esta condición.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>int a = 50;</h6>
+                    <h6>int b = 50;</h6>
+                    <h6> if (b > a):</h6>
+                    <h6>{</h6>
+                    <h6>&emsp;Console.WriteLine("b es mayor que a");</h6>
+                    <h6>}</h6>
+                    <h6> else if (b == a):</h6>
+                    <h6>{</h6>
+                    <h6>&emsp;Console.WriteLine("b es igual que a");</h6>
+                    <h6>}</h6>
+                </div>
+                <h3>En este ejemplo, a es igual a b, por lo que la primera condición no es verdadera, pero la
+                    condición else if es verdadera, por lo que se imprime en la pantalla que "a y b son iguales".</h3>
+                <br>
+                <h1>Else</h1>
+                <h3>La palabra clave else captura cualquier cosa que no esté atrapada por las condiciones
+                    anteriores.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>int a = 100;</h6>
+                    <h6>int b = 50;</h6>
+                    <h6> if (b > a):</h6>
+                    <h6>{</h6>
+                    <h6>&emsp;Console.WriteLine("b es mayor que a");</h6>
+                    <h6>}</h6>
+                    <h6> else if (b == a):</h6>
+                    <h6>{</h6>
+                    <h6>&emsp;Console.WriteLine("b es igual a");</h6>
+                    <h6>}</h6>
+                    <h6> else:</h6>
+                    <h6>{</h6>
+                    <h6>&emsp; Console.WriteLine("a es mayor que b");</h6>
+                    <h6>}</h6>
+                </div>
+                <h3>En este ejemplo, a es mayor que b, por lo que la primera condición no es verdadera, también la
+                    condición else if no es verdadera, así que pasamos a la condición else y mostramos en la pantalla
+                    que "a es mayor que b".</h3>
+                <br>
+                <h3>También puedes tener un else sin el else if:</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>int a = 100;</h6>
+                    <h6>int b = 50;</h6>
+                    <h6> if (b > a):</h6>
+                    <h6>{</h6>
+                    <h6>&emsp;Console.WriteLine("b es mayor que a");</h6>
+                    <h6>}</h6>
+                    <h6> else:</h6>
+                    <h6>{</h6>
+                    <h6>&emsp; Console.WriteLine("a es mayor que b");</h6>
+                    <h6>}</h6>
+                </div><br>
+                <h1>Y Logico</h1>
+                <h3>El simbolo del y Logico es "&&", es un operador lógico, y se utiliza para combinar declaraciones condicionales
+                </h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>int a = 100;</h6>
+                    <h6>int b = 50;</h6>
+                    <h6>int c = 150; </h6>
+                    <h6>if (a > b && c > a):</h6>
+                    <h6>{</h6>
+                    <h6>&emsp; Console.WriteLine("c es mayor que b")</h6>
+                    <h6>}</h6>
+                </div>
+                <h3>En este ejemplo se comprueban dos condiciones y si ambas se cumplen muestra que "c es mayor que
+                    b".</h3><br>
+                <h1>O Logico</h1>
+                <h3>El simbolo clave es "||" es un operador lógico y se usa cuando basta que una de las dos condiciones sea verdadera
+                </h3>
+                <h4>Es la tecla al lado izquierdo del 1</h4>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>int a = 100;</h6>
+                    <h6>int b = 50;</h6>
+                    <h6>int c = 150; </h6>
+                    <h6> if (c > b || c > a):</h6>
+                    <h6>{</h6>
+                    <h6>&emsp; Console.WriteLine("C");</h6>
+                    <h6>}</h6>
+                </div>
+                <h3>En este ejemplo se comprueban 2 condiciones y si una de las dos se cumple se imprime "C".
+                </h3><br>
+                <h1>Anidado de condicionales</h1>
+                <h3>Puede tener declaraciones if dentro de declaraciones if, esto se llama instrucciones if
+                    anidadas.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6> if (a > b):</h6>
+                    <h6>{</h6>
+                    <h6>&emsp;if (c > b):</h6>
+                    <h6>&emsp;&emsp; {</h6>             
+                    <h6>&emsp;&emsp;&emsp;Console.WriteLine("O");</h6>
+                    <h6>&emsp;&emsp;}</h6>
+                    <h6>}</h6>
+
+                </div>
+                <h3>En este ejemplo se comprueba la primera condición "a > b", si esta se cumple, compruba si "c >
+                    b", y esi esta última se llega a cumplir imprime "O".</h3><br>
+            </div><br>
+        </div>
+        <div class="container-fluid bg-dark text-white bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#whi">Ciclo while</h1>
+            <div class="collapse" id="whi">
+                <h3>Con el ciclo while podemos ejecutar un conjunto de declaraciones siempre que una condición sea
+                    verdadera, se debe considerar crear un cierre a esta para que no se repita de manera indefinida.
+                </h3>
+                <h4>Al igual que con los condicinales la condicion del While debe de estar entre parentesis</h4>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>int i = 1</h6>
+                    <h6>while (i < 6):</h6>
+                    <h6>{</h6> 
+                    <h6>&emsp;Console.WriteLine(i);</h6>
+                    <h6>&emsp;i += 1; </h6>
+                    <h6>}</h6>
+                </div>
+                <h3>El tiempo del bucle depende de la condición, como en este caso la variable "i" va aumentando de
+                    1 en 1 hasta llegar a 6 y así "romper el ciclo" para salir de este.</h3><br>
+            </div>
+        </div>
+        <div class="container-fluid bg-light bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#fun">Funciones/Metodos</h1>
+            <div class="collapse" id="fun">
+                <h2><em><b>Para que un metodo pueda ser ejecutado debe ser llamado desde el main, de lo contrario no se ejecutara 
+                    y nunca realizara nada.</b></em></h2>
+                <h6>using System;</h6>
+                <h6>namespaces CodePyMaker {</h6>
+                <h6>&emsp;class program{</h6>
+                <h6>&emsp;&emsp;static void Main(String[] args){</h6>
+                <h6>&emsp;&emsp;&emsp;
+                <h6>&emsp;&emsp;}</h6>
+                <h6>&emsp;}</h6>
+                <h6>}</h6>
+                <h2>consideraciones:</h2>
+                <ul>
+                    <li>No es ejecutado hasta que es llamado en el Main.</li>
+                    <li>Todos los metodos deben estar dentro de una Clase.</li>
+                    <li>Se debe especificar el tipo devuelto y los parametros.</li>
+                    <li>No existe diferencia entre metodos y funciones en C#, ambos terminos son lo mismo.</li>
+                    <li>Siempre los metodos deben llevar un return, a exepcion los que sean del tipo void.</li>
+                </ul>
+                <h3>Son un grupo de sentencias a las que se les da un nombre identificado, que realiza una tarea en concreto</h3>
+                <h3>Se le pueden pasar datos conocidos como parametros, tambien no se le pueden pasar parametros siempre y cuendo esta este
+                    diseñada para funcionar asi.</h3>
+                <h3>Un metodo puede devolver valores como no puede hacerlo esto depende de su contruccion.</h3><br>
+                <h1>Creacion de un metodo</h1>
+                <h3>En C# un metodo se define siempre usando la palabra reservada "static" bajo la siguiente sintaxis:</h3>
+                <h4>static tipoDato + nombreMetodo (parametros){</h4>
+                <h4>&emsp;cuerpo del metodo</h4>
+                <h4>}</h4>
+                <h3>Si no utilizamos la palabra reservada "static" se generara un problema de objeto, de momento es recomendable usarla solamente
+                    aunque no sepamos que significa. En una proxima actulizacion se agregata POO(Programacion Orientada a Objetos).
+                </h3>
+                <h2><em><b>nota: tipoDato puede ser int, double, string o cualquier tipo mencionado en la seccion de tipos de datos.</b></em></h2>
+                <h2>Ejemplo de un metodo que retorna un valor:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>static void Suma(){:</h6>
+                    <h6>&emsp;int numero = 7;</h6>
+                    <h6>&emsp;int numero1 = 9;</h6>
+                    <h6>&emsp;int resultado = nummero + numero1;</h6>
+                    <h6>&emsp;Console.WriteLine(resultado);</h6>
+                    <h6>}</h6>
+                </div><br>
+                <h2><em><b>nota importante: los metodos con la palabra reservada "void" nunca llevan return</b></em></h2>
+                <h3>utilizamos la palabra reservada "void" para indicar que no retornaremos nada</h3>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>static int Suma(int num1, int num2){:</h6>
+                    <h6>&emsp;int resultado = num1 + num2;</h6>
+                    <h6>&emsp;Console.WriteLine(resultado);</h6>
+                    <h6>}</h6>
+                </div><br>
+                <h2><em><b>nota importante: todos los metodos que sean de tipo numerico, string o arrays simpre deben llevar un return</b></em></h2>
+                <h1>Llamado de un metodo</h1>
+                <h3>Para llamar a un metodo este debe estar dentro del Main.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>using System;</h6>
+                    <h6>namespaces CodePyMaker {</h6>
+                    <h6>&emsp;class program{</h6>
+                    <h6>&emsp;&emsp;static void Main(String[] args){</h6>
+                    <h6>&emsp;&emsp;&emsp;metodo();
+                    <h6>&emsp;&emsp;}</h6>
+                    <h6>&emsp;}</h6>
+                    <h6>}</h6>
+                    <h6> static void metodo(){</h6>
+                    <h6>&emsp;Console.WriteLine("Hola funcion");</h6>
+                    <h6>}</h6>
+                </div><br>
+                <h1>Parámetros</h1>
+                <h3>La información puede suministrarse al metodo como parámetro.</h3>
+                <h3>Los parámetros se especifican después de que el nombre del metodo, dentro de los
+                    paréntesis "()".
+                    Puede añadir tantos parámetros como desee, sólo les separan con una coma.</h3>
+                <h3>El siguiente ejemplo tiene un metodo con un parámetro (variable). Cuando se invoca el metodo,
+                    se pasa a lo largo de un nombre de pila, que se utiliza dentro de la función para imprimir
+                    el nombre completo</h3>
+                <h4>Al pasarle parametros a un metodo siempre se deben definir de que tipo son como se muestra a continuacion.</h4>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>using System;</h6>
+                    <h6>namespaces CodePyMaker {</h6>
+                    <h6>&emsp;class program{</h6>
+                    <h6>&emsp;&emsp;static void Main(String[] args){</h6>
+                    <h6>&emsp;&emsp;&emsp;metodoConParametros("este es mi");</h6>
+                    <h6>&emsp;&emsp;&emsp;metodoConParametros("hello");</h6>
+                    <h6>&emsp;&emsp;&emsp;metodoConParametros("CodePyMaker creo un");</h6>
+                    <h6>&emsp;&emsp;}</h6>
+                    <h6>&emsp;}</h6>
+                    <h6>}</h6>
+                    <h6> static string metodoConParametros (string variable)</h6>
+                    <h6>{</h6>
+                    <h6>&emsp;string fusion = variable + " metodo";</h6><br>
+                    <h6>&emsp;return fusion;</h6>
+                    <h6>}</h6>
+                </div>
+                <h3>Se puede enviar cualquier tipo de datos de parámetro a un metodo (cadena de string, número, arrays,, etc.), 
+                    y será tratado como el mismo tipo de datos dentro del metodo, siempre y cuando coincida con el tipo de dato
+                    en las variables del metodo.</h3><br>
+                <h1>Parámetros por defecto</h1>
+                <h3>Si llamamos al metodo sin parámetros, se utiliza el valor por defecto.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>using System;</h6>
+                    <h6>namespaces CodePyMaker {</h6>
+                    <h6>&emsp;class program{</h6>
+                    <h6>&emsp;&emsp;static void Main(String[] args){</h6>
+                    <h6>&emsp;&emsp;&emsp;Console.WriteLine(metodo());</h6>
+                    <h6>&emsp;&emsp;&emsp;Console.WriteLine(metodo("nuevo"));</h6>
+                    <h6>&emsp;&emsp;}</h6>
+                    <h6>&emsp;}</h6>
+                    <h6>}</h6>
+                    <h6> static string metodo(string varibles="CodePyMaker")</h6>
+                    <h6>{</h6>
+                    <h6>&emsp;string fusion = variable + " " + " metodo";</h6><br>
+                    <h6>&emsp;return fusion;</h6>
+                    <h6>}</h6>
+                    <h6>//la salida de la primera linea es CodePyMaker</h6>
+                    <h6>// la segunda con el str "nuevo" es "nuevo metodo"</h6>
+
+                </div>
+                <h3>Como se ve en el ejemplo para hacer un parámetro por defecto se debe asignar un valor a la
+                    variable de la función, que en caso de ser llamada sin parámtros automáticamente tomará ese. Siempre se deba tener encuanta
+                    que estas siempre van al final de los parametros obligatorios, no se pueden intercalar.
+                </h3>
+                <br>
+                <h1>Valores retornados</h1>
+                <h3>Para que un metodo devuelva algun valor se debe usar la palabra reservada "return"</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6> static int multiplicacion(int variable){</h6>
+                    <h6>&emsp;return x * 5</h6>
+                    <h6>}</h6><br>
+                    <h6>using System;</h6>
+                    <h6>namespaces CodePyMaker {</h6>
+                    <h6>&emsp;class program{</h6>
+                    <h6>&emsp;&emsp;static void Main(String[] args){</h6>
+                    <h6>&emsp;&emsp;&emsp;multiplicacion(10);</h6>
+                    <h6>&emsp;&emsp;&emsp;multiplicacion(5);</h6>
+                    <h6>&emsp;&emsp;&emsp;multiplicacion(90);</h6>
+                    <h6>&emsp;&emsp;}</h6>
+                    <h6>&emsp;}</h6>
+                    <h6>}</h6>
+                    
+                </div>
+                <h6><b>nota: no importa si el metodo esta antes o despues del Main, aunque el flujo de ejecucion del programa se 
+                    de arriba hacia abajo, llegando al Main siempre va a buscar al metodo independiente su ubicacion</b></h6><br>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#for">Ciclo for</h1>
+            <div class="collapse" id="for">
+                <h3>Un ciclo for se utiliza para iterar sobre una secuencia (que es ya sea una lista, una tupla, un
+                    diccionario, un conjunto, o una cadena).</h3>
+                <h3>Existen dos formas de for en c# uno que esta dedicado especificamen a iterar sobre datos mutables</h3>
+                <h2>sintaxis:</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>for (iniciacio del bucle, condicion, incremento/dremento)</h6>
+                    <h6>{</h6>
+                    <h6>&emsp;codigo</h6>
+                    <h6>}</h6>
+                    <h6>foreach( iterador in nombre)</h6>
+                    <h6>{</h6>
+                    <h6>&emsp;codigo</h6>
+                    <h6>}</h6>    
+                </div>
+                <h3>Ambos son aplicable para cualquier tipo de dato pero es mas recomendable utlizar el foreach en la iteracion 
+                    de algun tipo de dato
+                </h3><br>
+                <h1>ejemplos</h1>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>using System;</h6>
+                    <h6>namespaces CodePyMaker{</h6>
+                    <h6>&emsp;class program {</h6>
+                    <h6>&emsp;&emsp;static void Main(String[] args) {</h6>
+                    <h6>&emsp;&emsp;&emsp;impar = 0;</h6>       
+                    <h6>&emsp;&emsp;&emsp;&emsp;for (i = 0; i < 100; i++)</h6>
+                    <h6>&emsp;&emsp;&emsp;&emsp;&emsp;{</h6>
+                    <h6>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if (i % 2 != 0)</h6>
+                    <h6>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{</h6>
+                    <h6>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Console.Write("{0}|", i);</h6>
+                    <h6>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;impar++;</h6>                
+                    <h6>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}</h6>
+                    <h6>&emsp;&emsp;&emsp;&emsp;&emsp;}</h6>
+                    <h6>&emsp;&emsp;&emsp;}</h6>
+                    <h6>&emsp;&emsp;}</h6>
+                    <h6>}</h6>
+
+                </div><br>
+                <br>
+            </div>
+        </div>
+        <div class="container-fluid bg-light bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#str">Strings</h1>
+            <div class="collapse" id="str">
+                <h3>Se define un string por el o los caracteres rodeados por comillas simples o dobles ("" o '') siendo
+                    "hola" lo mismo que 'hola'.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>Console.WriteLine("Hola")</h6>
+                    <h6>Console.WriteLine('Hola')</h6>
+                </div>
+                <h3>En ambos casos se imprime lo mismo (Hola).</h3><br>
+                <h1>Operaciones con string</h1>
+                <h3>Los estring se pueden asignar a las variables y operar en ellas, con sumas de strings,
+                    multiplicación de un string por un número entero. 
+                    Recordar que nunca se puede sumar un string con un valor numérico a
+                    menos que sea de la forma string + string(valor)</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>string palabra = "Hola"</h6>
+                    <h6>string otra_palabra = "Mundo"</h6>
+                    <h6>Console.WriteLine(palabra + " " + otra_palabra)</h6>
+                    <h6>Console.WriteLine(palabra * 2)</h6>
+                </div>
+                <h3>En el caso de la suma lo que resultaría sería Console.WriteLine("Hola Mundo") y en la multiplicación
+                    Console.WriteLine("HolaHola")</h3><br>
+                <h1>Índices de un string</h1>
+                <h3>Un string funciona como una matriz, por lo cual tiene índice, siempre partiendo desde el índice 0.
+                </h3>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>string pa = "Hola"</h6>
+                    <h6>Console.WriteLine(pa[0])</h6>
+                </div>
+                <h3>En este caso de la variable pa se muestra "h"</h3><br>
+                <h1>Verificación</h1>
+                <h3>Se puede comprobar si un caracter o una palabra está en otro string utilizando la función in, y en
+                    contraparte a esta se puede usar el not in de modo que si la respuesta fuera true en el caso
+                    anterior en este sería false.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>string texto = "Hola como estás"</h6>
+                    <h6>string p = "como"</h6>
+                    <h6>if (p in texto){</h6>
+                    <h6>&emsp;Console.WriteLine("Si")</h6>
+                    <h6>}</h6>
+                    <h6>else if (p not in texto){</h6>
+                    <h6>}</h6>
+                    <h6>&emsp;Console.WriteLine("No")</h6>
+                    <h6>else{</h6>
+                    <h6>&emsp;Console.WriteLine("Si")</h6>
+                    <h6>}</h6>
+                </div>
+                <h3>Como en ambos casos existe p en texto de igual forma imprimirá Si</h3><br>
+                <br>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#lis">Array</h1>
+            <div class="collapse" id="lis">
+                <h3>Estructura que contiene una coleccion de valores del mismo tipo y que tienen relacion entre si</h3>
+                <h3>Las listas pueden contener diferentes elementos como: int,float,string,etc</h3>
+                <br>
+                <h1>Crear un array</h1>
+                <h3>tipoDeDato [] nombre;</h3>
+                <h3>nombre = new tipoDeDato[X]; x = cantidad de datos que va almacenar</h3>
+                <h2>Ejemplo</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>int [] edades = {19,54,30,38,17,60};</h6>
+                    <h6>int [] años = new int[3]</h6>
+                    <h6>años[0] = 2060;</h6>
+                    <h6>años[1] = 2010;</h6>
+                    <h6>años[0] = 2020;</h6>
+                </div><br>
+                <h1>Índices de un Array</h1>
+                <h3>Los Arrays al tener cierta relacion con las matrices tiene indices de forma qeu si se necesita
+                    un solo valor de este es posible obtenerlo.</h3>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>int[] array = new int[5] {12,16,20,40,100};</h6>
+                    <h6>Console.WriteLine(array[0])</h6>
+                </div>
+                <h3>En este ejemplo lo que debe imprimir es [12] según lo dicho anteriormente</h3><br>
+                <h1>Reasignación a elementos específicos</h1>
+                <h3>Se pueden alterar elementos específicos de una lista a través de sus índices de la siguiente manera:
+                </h3>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>int[] array = new int[5] {12,16,20,40,100};</h6>
+                    <h6>array[3] = 9</h6>
+                    <h6>Console.WriteLine(array)</h6>
+                </div>
+                <h3>la salida de esats lineas es System.int32[] porque un array no se puede mostar directamente
+                    este debe ser recorrido con un bucle for o foreach.
+                </h3><br>
+            </div>
+        </div>
+        <div class="container-fluid bg-light bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#tup">Tuplas</h1>
+            <div class="collapse" id="tup">
+                <h3>Las tuplas son datos que no son modificables y no pueden ser ordenadas. y son escritas con
+                    '()'
+                </h3>
+                <h1>Crear una tupla</h1>
+                <h3>Para crear una tupla nueva se utiliza tuple(), en cambio con valores, se colocan los valores
+                    dentro de ()</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>var tupla = (valor1, valor2);</h6>
+                    <h6>var tupla2 = ('gato','perro','loro');</h6>
+                </div>
+                <h6>una tupla puede recibir hasta n valores.</h6>
+                <h1>Acceder a las tuplas</h1>
+                <h3>Para acceder al valor de una tupla se debe hacer con la palabra reservada item mas la posicion del 
+                    elemento
+                </h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>var y = ('francia','españa','china');</h6>
+                    <h6>Console.WriteLine(y.items1);</h6>
+                </div>
+                <h2>En la salida: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>francia</h6>
+                </div>
+                <h1>Ciclo atraves de la tupla</h1>
+                <h3>Estos pueden ser recorridos por un ciclo for</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>var frutas = ('manzana','pera','uva', 'melon')</h6>
+                    <h6>for (i in frutas)</h6>
+                    <h6>{</h6>
+                    <h6>&emsp;Console.WriteLine(i);</h6>
+                    <h6>}</h6>
+                </div>
+                <h2>En la salida: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>manzana</h6>
+                    <h6>pera</h6>
+                    <h6>uva</h6>
+                    <h6>melon</h6>
+                </div>
+            </div>
+        </div>
+    <div class="container">
+        <h1 class="display-1 text-center">Modulos</h1>
+        <h1 class="display-3 text-left">Funciones en comun para datos secuenciales</h1>
+        <h5>x es una varaiable, y es otra variable</h5>
+        <table class="table table-hover text-left">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>x.Length</td>
+                    <td>Retorna el largo de cualquier tipo de dato mutable</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="display-3 text-left">Strings</h1>
+        <h5>x es una varaiable,s es un string *para otros strings se colocara un '</h5>
+        <table class="table table-hover text-left">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>str(x)</td>
+                    <td>Retorna un string</td>
+                </tr>
+                <tr>
+                    <td>s.ToLower()</td>
+                    <td>Retorna el string en minúscula</td>
+                </tr>
+                <tr>
+                    <td>s.ToUpper()</td>
+                    <td>Retorna el string en mayúscula</td>
+                </tr>
+                <tr>
+                    <td>String.Format("texto de formato")</td>
+                    <td>Introduce valores especializados a un string
+                    </td>
+                </tr>
+                <tr>
+                    <td>.replace(string a cambiar,valor nuevo)</td>
+                    <td>Remplaza un string por otro</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="display-3 text-left">math</h1>
+        <table class="table table-hover text-left">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math.Max(parametro1, parametro2);</td>
+                    <td>retorna el mayor numero entre los parametros. No recibe mas de 2 parametros</td>
+                </tr>
+                <tr>
+                    <td>Math.Min(parametro 1, parametro2);</td>
+                    <td>retorna el menor numero entre los parametros. No recibe mas de 2 parametros</td>
+                </tr>
+                <tr>
+                    <td>Math.sqrt(valor);</td>
+                    <td>calculo de raices</td>
+                </tr>
+                <tr>
+                    <td>Math.Pow(base, exponente);</td>
+                    <td>calcula potencias</td>
+                </tr>
+                <tr>
+                    <td>Math.Round(numero);</td>
+                    <td>Redondea los numero de tipo float, double y decimal a numero sin parte decimal</td>
+                </tr>
+                <tr>
+                    <td>Math.Abs(numero);</td>
+                    <td>retorna un numero en su valor absoluto.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="display-3 text-left">Arrays</h1>
+        <h5>a es un archivo, x es un string</h5>
+        <table class="table table-hover text-left">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Array.Sort(nombre del array);</td>
+                    <td>Ordena el Array en orden alfabetico o acendente</td>
+                </tr>
+                <tr>
+                    <td>Array.Max();</td>
+                    <td>retorna el valor mas alto dentro del array</td>
+                </tr>
+                <tr>
+                    <td>Array.Min();</td>
+                    <td>retorna el valor mas bajo dentro de un array.</td>
+                </tr>
+                <tr>
+                    <td>Array.Sum()</td>
+                    <td>suma todos los valores dentro del array</td>
+                </tr>
+                <tr>
+                    <td>Clone()</td>
+                    <td>colona un Array</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <br>
+    <a class="btn btn-dark m-2" href="referencias.html">Pagina anterior</a>
+</body>
