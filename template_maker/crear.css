@@ -1,0 +1,51 @@
+#botón {
+    text-align: center;
+    color: ivory;
+    background-color: black;
+}
+.dv {
+    width: 350px;
+    height: 50px;
+    padding: 8px;
+    border: 1px solid #aaaaaa;
+    text-align: justify;
+}
+.col {
+    height: 50px;
+}
+#tit {
+    text-align: center;
+    border: 1px solid black;
+}
+#imga{
+    height: 20%;
+    width: 20%;
+}
+#cont {
+    border: 1px solid black;
+}
+
+.code.over {
+    border: 2px dashed #000;
+}
+
+.rv.over {
+    border: 2px dashed #000;
+}
+.caki{
+    border: 1px solid black;
+    width: 75vh;
+    padding-top: 10px;
+}
+#inputs,#textres,#copiar{
+    display: none;
+}
+.selc{
+    width: 100vh;
+}
+#res {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
