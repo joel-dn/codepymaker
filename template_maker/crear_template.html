@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodepyMaker</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Font awesome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!--Scripts-->
+    <!--Css-->
+    <link rel="stylesheet" href="jquery.multiselect.css">
+    <link href="crear.css" rel="stylesheet">
+    <!--Scripts Statics-->
+</head>
+
+<body class="disabled-select">
+    <div class="container-fluid bg-secondary text-center" id="log">
+        <img src="imagenes/titulo.png" alt="tit" id="imga">
+    </div>
+    <div class="bg-dark"><button class="btn btn-dark text-dark" disabled>hello</button></div>
+    <br>
+    <div class="container">
+        <hr>
+        <h1 style="text-align: center;"><input type="text" id="titulo" value="" placeholder="titulo" class="form-control"></h1>
+        <hr>
+        <p>
+            <textarea id="parrafo" cols="155" rows="10" placeholder="descripcion" value=""></textarea>
+        </p>
+        <h3>Ordenamineto de codigo</h3>
+        <br>
+        <div class="d-flex">
+            <div id="text">
+            </div>
+            <div class="ml-3" id="casilla">
+            </div>
+        </div>
+        <div id="inputs">
+        </div>
+        <div class="m-2 d-flex"><button class="btn btn-dark" id="btnplus">+</button><input type="text" value="" class="ml-2 form-control" id="textinp"></div>
+        <br>
+        <div id="res">
+        </div>
+        <br>
+        <div id="copiar"><button class="btn btn-dark btn-block" id="btnres">Copiar</button></div>
+        <br>
+        <hr>
+        <h1>Respuestas diccionario</h1>
+        <div id="textres"><p id="respuesta">{</p></div>
+        <hr>
+        <h1>Template</h1>
+        <div><p id="textop"></p></div>
+        <hr>
+    </div>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.multiselect.js"></script>
+    <script src="scripts/crear.js"></script>
+    <div id='srcs'></div>
+</body>
